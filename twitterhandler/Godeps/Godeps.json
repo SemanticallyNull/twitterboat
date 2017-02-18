@@ -1,0 +1,73 @@
+{
+	"ImportPath": "github.com/BenChapman/twitterboat/twitterhandler",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v71",
+	"Deps": [
+		{
+			"ImportPath": "github.com/cenkalti/backoff",
+			"Comment": "v1.0.0-15-gb02f2bb",
+			"Rev": "b02f2bbce11d7ea6b97f282ef1771b0fe2f65ef3"
+		},
+		{
+			"ImportPath": "github.com/cloudfoundry-community/go-cfenv",
+			"Comment": "v1.14.0-7-gc567d77",
+			"Rev": "c567d77dab8551bc4077e68e5a04415f1d74a911"
+		},
+		{
+			"ImportPath": "github.com/dghubble/go-twitter/twitter",
+			"Rev": "fab2c1610270521a409d76c4a1f04c85eaa8702f"
+		},
+		{
+			"ImportPath": "github.com/dghubble/oauth1",
+			"Comment": "v0.4.0-11-g4385816",
+			"Rev": "4385816142116aade2d97d0f320f9d3666e74cd9"
+		},
+		{
+			"ImportPath": "github.com/dghubble/sling",
+			"Comment": "v1.0-28-gc961a43",
+			"Rev": "c961a4334054e64299d16f8a31bd686ee2565ae4"
+		},
+		{
+			"ImportPath": "github.com/google/go-querystring/query",
+			"Rev": "9235644dd9e52eeae6fa48efd539fdc351a0af53"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/mapstructure",
+			"Rev": "db1efb556f84b25a0a13a04aad883943538ad2e0"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "ef2e00e88c5e0a3569f0bb9df697e9cbc6215fea"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v5",
+			"Comment": "v5.2.2",
+			"Rev": "8829ddcd8bdb333e477cc845946c4b9b2ef66280"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v5/internal",
+			"Comment": "v5.2.2",
+			"Rev": "8829ddcd8bdb333e477cc845946c4b9b2ef66280"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v5/internal/consistenthash",
+			"Comment": "v5.2.2",
+			"Rev": "8829ddcd8bdb333e477cc845946c4b9b2ef66280"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v5/internal/hashtag",
+			"Comment": "v5.2.2",
+			"Rev": "8829ddcd8bdb333e477cc845946c4b9b2ef66280"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v5/internal/pool",
+			"Comment": "v5.2.2",
+			"Rev": "8829ddcd8bdb333e477cc845946c4b9b2ef66280"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v5/internal/proto",
+			"Comment": "v5.2.2",
+			"Rev": "8829ddcd8bdb333e477cc845946c4b9b2ef66280"
+		}
+	]
+}

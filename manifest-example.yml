@@ -1,0 +1,24 @@
+memory: 64M
+disk_quota: 64M
+applications:
+- name: twitterboat_twitterhander
+  command: twitterhandler
+  health_check_type: none
+  no-route: true
+  instances: 1
+  env:
+    GOPACKAGENAME: twitterhandler
+    TWITTER_CONSUMER_KEY:
+    TWITTER_CONSUMER_SECRET:
+    TWITTER_ACCESS_TOKEN:
+    TWITTER_ACCESS_SECRET:
+  services:
+  - twitterboat_redis
+- name: twitterboat_connhander
+  command: connhandler
+  random-route: true
+  instances: 3
+  env:
+    GOPACKAGENAME: connhandler
+  services:
+  - twitterboat_redis

@@ -1,0 +1,54 @@
+{
+	"ImportPath": "github.com/BenChapman/twitterboat/connhandler",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v71",
+	"Deps": [
+		{
+			"ImportPath": "github.com/cloudfoundry-community/go-cfenv",
+			"Comment": "v1.14.0-7-gc567d77",
+			"Rev": "c567d77dab8551bc4077e68e5a04415f1d74a911"
+		},
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Rev": "1ea25387ff6f684839d82767c1733ff4d4d15d0a"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Rev": "dfc482b2558f4151fc8598139a686caf3fb2ef65"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/mapstructure",
+			"Rev": "db1efb556f84b25a0a13a04aad883943538ad2e0"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v5",
+			"Comment": "v5.2.2",
+			"Rev": "8829ddcd8bdb333e477cc845946c4b9b2ef66280"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v5/internal",
+			"Comment": "v5.2.2",
+			"Rev": "8829ddcd8bdb333e477cc845946c4b9b2ef66280"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v5/internal/consistenthash",
+			"Comment": "v5.2.2",
+			"Rev": "8829ddcd8bdb333e477cc845946c4b9b2ef66280"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v5/internal/hashtag",
+			"Comment": "v5.2.2",
+			"Rev": "8829ddcd8bdb333e477cc845946c4b9b2ef66280"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v5/internal/pool",
+			"Comment": "v5.2.2",
+			"Rev": "8829ddcd8bdb333e477cc845946c4b9b2ef66280"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v5/internal/proto",
+			"Comment": "v5.2.2",
+			"Rev": "8829ddcd8bdb333e477cc845946c4b9b2ef66280"
+		}
+	]
+}
