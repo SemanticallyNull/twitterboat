@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
@@ -51,7 +52,7 @@ func main() {
 		WriteTimeout: 300 * time.Second,
 	}
 	r := mux.NewRouter()
-	r.HandleFunc("/{id}", rh.handleHTTPRequest)
+	r.HandleFunc("/", rh.handleHTTPRequest)
 	srv.Handler = r
 	srv.ListenAndServe()
 }
@@ -61,17 +62,24 @@ type reqHandler struct {
 }
 
 func (h reqHandler) handleHTTPRequest(w http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
-	key := vars["id"]
+	var params map[string]interface{}
+	json.NewDecoder(r.Body).Decode(&params)
+	myKey := params["me"].(string)
+	opponentKey := params["opponent"].(string)
 	w.WriteHeader(http.StatusOK)
 	ticker := time.NewTicker(time.Millisecond * 250)
 	go func() {
 		for _ = range ticker.C {
-			val, err := h.redisClient.Get("key." + key).Int64()
+			myVal, err := h.redisClient.Get("key." + myKey).Int64()
 			if err != nil {
 				log.Printf("Redis error: %s", err)
 			}
-			fmt.Fprintf(w, "%d\n", val)
+			opponentVal, err := h.redisClient.Get("key." + opponentKey).Int64()
+			if err != nil {
+				log.Printf("Redis error: %s", err)
+			}
+			fmt.Fprintf(w, "%d\n", (myVal*100)/(myVal+opponentVal))
+			fmt.Printf("%d, %d, %d\n", myVal, opponentVal, (myVal*100)/(myVal+opponentVal))
 			if f, ok := w.(http.Flusher); ok {
 				f.Flush()
 			}

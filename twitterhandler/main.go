@@ -109,7 +109,6 @@ func main() {
 	for message := range stream.Messages {
 		demux.Handle(message)
 	}
-
 }
 
 func initRedis(redisCredentials map[string]interface{}) (*redis.Client, error) {
