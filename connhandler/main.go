@@ -78,8 +78,9 @@ func (h reqHandler) handleHTTPRequest(w http.ResponseWriter, r *http.Request) {
 			if err != nil {
 				log.Printf("Redis error: %s", err)
 			}
-			fmt.Fprintf(w, "%d\n", (myVal*100)/(myVal+opponentVal))
-			fmt.Printf("%d, %d, %d\n", myVal, opponentVal, (myVal*100)/(myVal+opponentVal))
+			percentage := float64(myVal) * 100.0 / (float64(myVal) + float64(opponentVal))
+			fmt.Fprintf(w, "%.1f\n", percentage)
+			fmt.Printf("%d, %d, %d\n", myVal, opponentVal, percentage)
 			if f, ok := w.(http.Flusher); ok {
 				f.Flush()
 			}
